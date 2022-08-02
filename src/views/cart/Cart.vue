@@ -1,18 +1,25 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <button @click="goHome">首页</button>
+    购物车
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
+  // name: "Cart",
+  components: {},
+  data() {
+    return {};
+  },
+  methods: {
+    goHome() {
+      // this.$router.push({
+      //   name:'Home'
+      // })
+      this.$store.commit("add");
+    }
   }
-}
+};
 </script>

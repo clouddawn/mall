@@ -22,7 +22,7 @@
         <div>分类</div>
       </template>
     </tab-bar-itme>
-    <tab-bar-itme link="/shopcart">
+    <tab-bar-itme link="/cart">
       <template #tabbar-item-icon>
         <img src="@/assets/img/tabbar/shopcart.svg" alt="">
       </template>
