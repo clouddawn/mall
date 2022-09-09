@@ -190,6 +190,7 @@ export default {
 
     .center-text {
       color: white;
+      font-size: 16px;
     }
   }
 }

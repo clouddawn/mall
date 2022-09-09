@@ -8,6 +8,7 @@
 
 <script>
 import BScroll from "better-scroll";
+
 export default {
   name: "Scroll",
   components: {},
@@ -21,6 +22,11 @@ export default {
       default: false
     }
   },
+  computed: {
+    CPullUpLoad() {
+      return this.pullUpLoad ? {threshold: 500} : false;
+    }
+  },
   data() {
     return {
       scroll: null,
@@ -28,10 +34,10 @@ export default {
   },
   mounted() {
     this.scroll = new BScroll(this.$refs.wrapper, {
-      // observeDOM: true,
-      // observeImage: {
-      //   debounceTime: 100
-      // },
+      observeDOM: true,
+      observeImage: {
+        debounceTime: 100
+      },
       click: true,
       probeType: this.probeType,
       pullUpLoad: this.pullUpLoad,

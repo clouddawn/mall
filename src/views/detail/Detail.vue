@@ -114,7 +114,9 @@ export default {
       product.price = this.goods.realPrice;
       product.id = this.id;
       product.count = 1;
-      this.$store.commit("addCart", product);
+      this.$store.dispatch("addCart", product).then((res) => {
+        this.$toast.show(res);
+      });
     }
   },
   destroyed() {

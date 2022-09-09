@@ -1,25 +1,45 @@
 <template>
-  <div>
-    <button @click="goHome">首页</button>
-    购物车
+  <div class="cart">
+    <nav-bar class="cart-nav-bar">
+      <template #center>
+        <div>购物车({{length}})</div>
+      </template>
+    </nav-bar>
+    <cart-list></cart-list>
+
   </div>
 </template>
 
 <script>
+import NavBar from "@/components/common/navbar/NavBar";
+import CartList from "@/views/cart/childComps/CartList";
+
+import {mapGetters} from 'vuex';
 
 export default {
-  // name: "Cart",
-  components: {},
+  name: "Cart",
+  components: {
+    NavBar,
+    CartList
+  },
   data() {
     return {};
   },
+  computed:{
+    ...mapGetters({
+      length:'cartLength'
+    })
+  },
   methods: {
-    goHome() {
-      // this.$router.push({
-      //   name:'Home'
-      // })
-      this.$store.commit("add");
-    }
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.cart {
+  .cart-nav-bar {
+    background-color: var(--color-tint);
+    color: white;
+  }
+}
+</style>
