@@ -20,6 +20,11 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # 部署到 https://<USERNAME>.github.io/<REPO>
- git push -f git@github.com:clouddawn/inline-mall.git master:gh-pages
+# git push -f git@github.com:clouddawn/inline-mall.git master:gh-pages
+#git push -f git@gitee.com: clouddawn/tao-mall.git master:gh-pages
+
+git remote add origin git@gitee.com:clouddawn/tao-mall.git
+
+git push -u origin "master"
 
 cd -
