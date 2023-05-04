@@ -13,7 +13,6 @@ export default {
   name: "TabBarItme",
   data() {
     return {
-      options: ["首页首页首页首页首页", "分类", "购物车", "我的"],
       currentIndex: 0,
     };
   },

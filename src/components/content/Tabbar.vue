@@ -2,10 +2,10 @@
   <div class="tabbar">
     <tab-bar-itme link="/home" activeColor="red">
       <template #tabbar-item-icon>
-        <img src="~@/assets/img/tabbar/home.svg" alt="">
+        <img src="@/assets/img/tabbar/home.svg" alt="">
       </template>
       <template #tabbar-item-active-icon>
-        <img src="~@/assets/img/tabbar/home_active.svg" alt="">
+        <img src="@/assets/img/tabbar/home_active.svg" alt="">
       </template>
       <template #tabbar-item-text>
         <div>首页</div>

@@ -2,7 +2,7 @@
   <div class="param-info">
     <table v-for="(sizes,index) in itemParams.sizes" :key="index">
       <tr v-for="(lines,indey) in sizes" :key="indey">
-        <td v-for="(item,indez) in lines">{{ item }}</td>
+        <td v-for="(item,indez) in lines" :key="indez">{{ item }}</td>
       </tr>
     </table>
     <table class="info-param">

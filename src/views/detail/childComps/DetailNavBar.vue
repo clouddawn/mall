@@ -10,6 +10,7 @@
         <div class="title">
           <div
             v-for="(item,index) in titles"
+            :key="index"
             @click="titleClick(index)"
             class="titleItem"
             :class="{active:currentIndex === index}">
